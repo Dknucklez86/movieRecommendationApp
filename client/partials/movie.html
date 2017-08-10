@@ -11,10 +11,13 @@
        </form>
 
    </div>
-   <div ng-repeat"movie in movierecs" class="movie col-md-12 col-sm-12 col-xs-12">
-      {{movie}}
+   <div ng-repeat="movie in data" class="movie col-md-12 col-sm-12 col-xs-12">
+      <span>{{movie.title}}</span>
+      <span>{{movie.date}}</span>
+      <span>{{movie.duration}}</span>
+      <span>{{movie.genre}}</span>
+      <span>{{movie.synopsis}}</span>
    </div>
-
 
 
  </div>

@@ -1,10 +1,10 @@
 movieRecApp.controller('MovieCtrl', function($rootScope, $scope, movieRecFactory) {
-  $scope.movieRecs = [];
+  $scope.data = [];
   $scope.isEditable = [];
 
 
   movieRecFactory.getMovieRec().then(function(data) {
-    $scope.movieRecs = data.data;
+    $scope.data = data.data;
   });
 
   $scope.save = function($event) {
@@ -15,7 +15,7 @@ movieRecApp.controller('MovieCtrl', function($rootScope, $scope, movieRecFactory
         "genre": $scope.movie.genre,
         "synopsis": $scope.movie.synopsis
       }).then(function(data) {
-        $scope.movieRecs.push(data.data);
+        $scope.data.push(data.data);
       });
       $scope.movie.title = '';
       $scope.movie.date = '';

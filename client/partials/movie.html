@@ -1,18 +1,23 @@
 <div class="container" ng-controller="MovieCtrl">
   <div class="row col-md-12">
-       <form novalidate class="simple-form">
+       <form novalidate class="simple-form" >
            <input type="text" class="form-control input-lg" placeholder="Enter Movie Title" ng-model="movie.title">
            <input type="text" class="form-control input-lg" placeholder="Enter Release Date" ng-model="movie.date">
            <input type="text" class="form-control input-lg" placeholder="Enter Duration" ng-model="movie.duration">
            <input type="text" class="form-control input-lg" placeholder="Enter Genre" ng-model="movie.genre">
            <input type="text" class="form-control input-lg" placeholder="Enter Synopsis" ng-model="movie.synopsis">
-
            <input type="submit" ng-click="save(movie)" value="Save">
        </form>
 
    </div>
-   <div ng-repeat="movie in data" class="movie col-md-12 col-sm-12 col-xs-12">
-      <span>{{movie.title}}</span>
+
+   <h1>Current Recommended Movie</h1>
+   <div ng-repeat="movie in data" class="movie col-md-12 col-sm-12 col-xs-12" ng-show="movie.isRecommended == true">
+     <table>
+       <tr> Title:
+         <td>{{movie.title}}</td>
+       </tr>
+     </table>
       <span>{{movie.date}}</span>
       <span>{{movie.duration}}</span>
       <span>{{movie.genre}}</span>

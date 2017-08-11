@@ -33,7 +33,8 @@
       releaseDate: req.body.releaeDate,
       duration: req.body.duration,
       genre: req.body.genre,
-      synopsis: req.body.synopsis
+      synopsis: req.body.synopsis,
+      isRecommended: req.body.isRecommended
     }, {}, function(err, data) {
       res.json(data);
     });

@@ -30,7 +30,7 @@
       _id: mongojs.ObjectId(req.body._id)
     }, {
       title: req.body.title,
-      releaseDate: req.body.releaeDate,
+      releaseDate: req.body.date,
       duration: req.body.duration,
       genre: req.body.genre,
       synopsis: req.body.synopsis,
@@ -41,14 +41,7 @@
 
   });
 
-  router.delete('/api/movierecs/:_id', function(req, res) {
-    db.movierecs.remove({
-      _id: mongojs.ObjectId(req.params._id)
-    }, '', function(err, data) {
-      res.json(data);
-    });
 
-  });
 
   module.exports = router;
 

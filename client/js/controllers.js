@@ -9,7 +9,7 @@ movieRecApp.controller('MovieCtrl', function($rootScope, $scope, movieRecFactory
   $scope.save = function($event) {
         movieRecFactory.saveMovieRec({
           "title": $scope.movie.title,
-          "releaeDate": $scope.movie.date,
+          "date": $scope.movie.date,
           "duration": $scope.movie.duration,
           "genre": $scope.movie.genre,
           "synopsis": $scope.movie.synopsis,
@@ -23,7 +23,5 @@ movieRecApp.controller('MovieCtrl', function($rootScope, $scope, movieRecFactory
         $scope.movie.genre = '';
         $scope.movie.synopsis = '';
   }
-
-
 
 });

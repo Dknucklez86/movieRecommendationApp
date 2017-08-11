@@ -12,16 +12,24 @@
    </div>
 
    <h1>Current Recommended Movie</h1>
-   <div ng-repeat="movie in data" class="movie col-md-12 col-sm-12 col-xs-12" ng-show="movie.isRecommended == true">
+   <div ng-repeat="movie in data" class="movie col-md-12 col-sm-12 col-xs-12" ng-show="$last">
      <table>
-       <tr> Title:
-         <td>{{movie.title}}</td>
+       <tr>
+         <td>Title: {{movie.title}}</td>
+       </tr>
+       <tr>
+         <td>Release Date: {{movie.date}}</td>
+       </tr>
+       <tr>
+         <td>Duration: {{movie.duration}}</td>
+       </tr>
+       <tr>
+         <td>Genre: {{movie.genre}}</td>
+       </tr>
+       <tr>
+         <td>Synopsis: {{movie.synopsis}}</td>
        </tr>
      </table>
-      <span>{{movie.date}}</span>
-      <span>{{movie.duration}}</span>
-      <span>{{movie.genre}}</span>
-      <span>{{movie.synopsis}}</span>
    </div>
 
 

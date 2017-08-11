@@ -11,13 +11,6 @@ movieRecApp.factory('movieRecFactory', function($http) {
     return $http.post(urlBase, movie);
   };
 
-  _movieRecService.updateMovieRec = function(movie) {
-    return $http.put(urlBase, movie);
-  };
-
-  _movieRecService.deleteMovieRec = function(id) {
-    return $http.delete(urlBase + '/' + id);
-  };
 
   return _movieRecService;
 });

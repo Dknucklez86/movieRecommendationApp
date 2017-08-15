@@ -25,6 +25,13 @@
 
   app.use(express.static(path.join(__dirname, '../client')));
   
+  app.when('/404', {
+    templateUrl: 'views/404.html',
+    controller: 'MainController'
+})
+
+.otherwise({ redirectTo: '/404' })
+  
   app.factory('Session', function($http) {
   var Session = {
     data: {},
